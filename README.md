@@ -1,4 +1,4 @@
-# Organizing Tags GUI リードミー
+# Organizing Tags GUI
 
 Organizing Tags GUIは、ファイルのタグを整理するための簡単なユーザーインターフェースを提供するツールです。このツールを使用することで、ファイルにタグを追加、削除し、整理することができます。
 
