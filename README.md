@@ -12,7 +12,7 @@ git pull https://github.com/deyoyoyoyo/Organizing-tags.git
 
 ## 使い方
 
-1. アプリケーションを起動します。
+1. Organizing_tags_GUI.batをダブルクリックしてアプリケーションを起動します。
 
 2. フォルダーパスを入力します。整理したいファイルが含まれているフォルダーのパスを指定します。
 
