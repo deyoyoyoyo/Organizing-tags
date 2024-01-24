@@ -36,19 +36,20 @@ def sort_tags(file_path, first_tags, last_tags, add_tags, remove_tags):
     with open(file_path, 'w') as f:
         f.write(tags)
 
-def main():
-    with open('config.json', 'r') as f:
-        config = json.load(f)
+def organize_tags(config):
     folder_path = config['folder_path']
     first_tags = config['first_tags']
     last_tags = config['last_tags']
-    extensions = config['extensions']
     add_tags = config.get('add_tags', [])
     remove_tags = config.get('remove_tags', [])
+    extensions = config['extensions']
+
     for file_name in os.listdir(folder_path):
         if file_name.endswith(tuple(extensions)):
             file_path = os.path.join(folder_path, file_name)
             sort_tags(file_path, first_tags, last_tags, add_tags, remove_tags)
 
 if __name__ == "__main__":
-    main()
+    with open('config.json', 'r') as f:
+        config = json.load(f)
+    organize_tags(config)
