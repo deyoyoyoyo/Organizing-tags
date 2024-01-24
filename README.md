@@ -7,9 +7,9 @@ Organizing Tags GUIは、キャプションファイルのタグを整理する�
 特別なインストールは必要ありません。Python 3.xをインストールしてください。
 
 ターミナルを開き任意のフォルダで下記コマンドを実行してください。
-
+```
 git pull https://github.com/deyoyoyoyo/Organizing-tags.git
-
+```
 ## 使い方
 
 1. Organizing_tags_GUI.batをダブルクリックしてアプリケーションを起動します。
