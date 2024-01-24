@@ -8,7 +8,8 @@ def sort_tags(file_path, first_tags, last_tags, add_tags, remove_tags):
 
     # タグの追加と削除
     for tag in add_tags:
-        if tag not in tags:
+        tag = tag.strip()  # 追加するタグから空白を削除
+        if tag and tag not in tags:  # 空白でないタグを追加し、重複を避ける
             tags.append(tag)
     for tag in remove_tags:
         if tag in tags:

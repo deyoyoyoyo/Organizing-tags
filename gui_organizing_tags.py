@@ -46,9 +46,11 @@ def load_config():
         log_text.insert(tk.END, f"Error loading config file: {e}\n")
 
 def update_tag_list(tags):
+    sorted_tags = sorted(tags)  # タグをASCIIの昇順でソート
     listbox_tags.delete(0, tk.END)
-    for tag in tags:
+    for tag in sorted_tags:
         listbox_tags.insert(tk.END, tag)
+
 
 def save_config():
     try:
@@ -82,13 +84,39 @@ def execute_organizing_tags():
     try:
         organize_tags(config)
         log_text.insert(tk.END, "Tags organized successfully.\n")
+
+        # タグ一覧を更新
+        all_tags = set()
+        folder_path = config['folder_path']
+        extensions = config['extensions']
+        for ext in extensions:
+            for file_path in glob.glob(os.path.join(folder_path, f'*{ext}')):
+                if os.path.exists(file_path):
+                    with open(file_path, 'r') as file:
+                        tags = file.read().split(',')
+                        all_tags.update(tags)
+
+        update_tag_list(list(all_tags))
+
     except Exception as e:
         log_text.insert(tk.END, f"Error organizing tags: {e}\n")
+
+def browse_folder():
+    folder_path = filedialog.askdirectory()  # フォルダーパスを選択するダイアログを表示
+    entry_folder_path.delete(0, tk.END)
+    entry_folder_path.insert(0, folder_path)
+
+def on_closing():
+    # ウィンドウが閉じるときに行いたい処理をここに追加
+    window.destroy()
 
 # GUIの初期設定
 window = tk.Tk()
 window.title("Organizing Tags GUI")
-window.geometry("900x400")  # ウィンドウの幅を800、高さを400に設定
+window.geometry("1000x400")  # ウィンドウの幅を800、高さを400に設定
+
+# ウィンドウの×ボタンを押したときに on_closing 関数を呼ぶ
+window.protocol("WM_DELETE_WINDOW", on_closing)
 
 # グリッドレイアウトのフレームを作成
 left_frame = tk.Frame(window)
@@ -99,7 +127,7 @@ right_frame.grid(row=0, column=1, padx=10, pady=10, sticky='n')
 
 # フォルダパスと拡張子の入力
 tk.Label(left_frame, text="フォルダーパス:").grid(row=0, column=0, padx=5, pady=5, sticky='w')
-entry_folder_path = tk.Entry(left_frame, width=40)  # 幅を広げました
+entry_folder_path = tk.Entry(left_frame, width=70)  # 幅を広げました
 entry_folder_path.grid(row=0, column=1, padx=5, pady=5, sticky='w')
 
 tk.Label(left_frame, text="拡張子:").grid(row=1, column=0, padx=5, pady=5, sticky='w')
@@ -144,8 +172,12 @@ save_button.grid(row=7, column=1, columnspan=2, padx=5, pady=5, sticky='w')
 execute_button = tk.Button(left_frame, text="実行", command=execute_organizing_tags)
 execute_button.grid(row=8, column=1, columnspan=4, padx=5, pady=5, sticky='w')
 
+# フォルダーパス選択ボタン
+folder_select_button = tk.Button(left_frame, text="フォルダーを参照", command=browse_folder)
+folder_select_button.grid(row=0, column=2, padx=5, pady=5, sticky='w')
+
 # ログ表示用テキストエリア
-log_text = tk.Text(left_frame, height=6, width=60)
+log_text = tk.Text(left_frame, height=4, width=60)
 log_text.grid(row=9, column=1, columnspan=4, padx=5, pady=5, sticky='w')
 
 # メインループ
