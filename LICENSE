@@ -1,24 +1,16 @@
-This is free and unencumbered software released into the public domain.
+MIT License
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
+Copyright (c) 2024 でょ
 
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
+許可が無制限で、このソフトウェアと関連文書ファイル（"ソフトウェア"）のコピーを取得、使用、修正、結合、発行、頒布、サブライセンス、および/または販売できる全ての人に対して、無償で提供します。
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+上記の著作権表示とこの許可通知は、ソフトウェアのすべてのコピーまたは重要な部分に含まれる必要があります。
 
-For more information, please refer to <https://unlicense.org>
+ソフトウェアは "現状のまま" で提供され、明示的または暗黙のうちに、商品性、特定の目的への適合性、および非侵害の保証を含むがこれに限らず、いかなる種類の保証もありません。いかなる場合においても、著作権者または著作権保有者は、ソフトウェアまたはソフトウェアの使用またはその他の取引に関連して生じたいかなる請求、損害賠償、またはその他の義務に対して責任を負いません。
+
+---
+このソフトウェアは以下のソースから取得しました:
+
+https://github.com/deyoyoyoyo/Organizing-tags
+
+許可通知の複製については、ソフトウェアまたはソフトウェアが配布される文書に提供されます。
