@@ -1,0 +1,8 @@
+{
+    "folder_path": "./caption",
+    "first_tags": ["1girl", "1boy", "eyes", "hair"],
+    "last_tags": ["solo", "looking at viewer", "best quality"],
+    "add_tags": ["cute", "best quality"],
+    "remove_tags": ["upper body"],
+    "extensions": [".txt", ".caption"]
+}
