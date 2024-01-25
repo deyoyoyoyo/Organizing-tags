@@ -46,6 +46,8 @@ def load_config():
     except Exception as e:
         log_text.insert(tk.END, f"Error loading config file: {e}\n")
 
+    entry_search.delete(0, tk.END)  # タグ検索フィールドをクリア
+
 # タグ一覧を保持するグローバル変数
 sorted_tags = []
 
@@ -74,6 +76,7 @@ def execute_organizing_tags():
         'add_tags': entry_add_tags.get().split(', '),
         'remove_tags': entry_remove_tags.get().split(',')
     }
+    entry_search.delete(0, tk.END)  # タグ検索フィールドをクリア
 
     try:
         # タグを整理
@@ -128,6 +131,7 @@ def load_tags():
 
     except Exception as e:
         log_text.insert(tk.END, f"Error loading tags: {e}\n")
+    entry_search.delete(0, tk.END)  # タグ検索フィールドをクリア
 
 # タグをリストからテキストフィールドに設定する関数
 def set_tags_from_listbox(event):
