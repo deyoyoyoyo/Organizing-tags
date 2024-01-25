@@ -8,8 +8,8 @@ def sort_tags(file_path, first_tags, last_tags, add_tags, remove_tags):
 
     # タグの追加と削除
     for tag in add_tags:
-        tag = tag.strip()  # 追加するタグから空白を削除
-        if tag and tag not in tags:  # 空白でないタグを追加し、重複を避ける
+        tag = tag.strip()
+        if tag and tag not in tags:  # ここで既存のタグをチェック
             tags.append(tag)
     for tag in remove_tags:
         if tag in tags:
@@ -51,6 +51,6 @@ def organize_tags(config):
             sort_tags(file_path, first_tags, last_tags, add_tags, remove_tags)
 
 if __name__ == "__main__":
-    with open('config.json', 'r') as f:
+    with open('../config.json', 'r') as f:
         config = json.load(f)
     organize_tags(config)

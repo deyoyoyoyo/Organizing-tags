@@ -2,23 +2,19 @@
     "folder_path": "./caption",
     "extensions": [
         ".txt",
-        "                    .caption"
+        ".caption"
     ],
     "first_tags": [
         "1girl",
-        "                    1boy",
-        "                    eyes",
-        "                    hair"
+        "1boy"
     ],
     "last_tags": [
-        "solo",
-        "                    looking at viewer",
-        "             best quality"
+        "normal quality"
     ],
     "add_tags": [
-        ""
+        "normal quality"
     ],
     "remove_tags": [
-        "1woman"
+        "zipper pull tab"
     ]
 }
