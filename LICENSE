@@ -1,16 +1,21 @@
 MIT License
 
-Copyright (c) 2024 でょ
+Copyright (c) 2024 deyoyoyoyo
 
-許可が無制限で、このソフトウェアと関連文書ファイル（"ソフトウェア"）のコピーを取得、使用、修正、結合、発行、頒布、サブライセンス、および/または販売できる全ての人に対して、無償で提供します。
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-上記の著作権表示とこの許可通知は、ソフトウェアのすべてのコピーまたは重要な部分に含まれる必要があります。
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-ソフトウェアは "現状のまま" で提供され、明示的または暗黙のうちに、商品性、特定の目的への適合性、および非侵害の保証を含むがこれに限らず、いかなる種類の保証もありません。いかなる場合においても、著作権者または著作権保有者は、ソフトウェアまたはソフトウェアの使用またはその他の取引に関連して生じたいかなる請求、損害賠償、またはその他の義務に対して責任を負いません。
-
----
-このソフトウェアは以下のソースから取得しました:
-
-https://github.com/deyoyoyoyo/Organizing-tags
-
-許可通知の複製については、ソフトウェアまたはソフトウェアが配布される文書に提供されます。
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
