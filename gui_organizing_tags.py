@@ -122,16 +122,24 @@ def load_tags():
         for ext in extensions:
             for file_path in glob.glob(os.path.join(folder_path, f'*{ext}')):
                 if os.path.exists(file_path):
-                    with open(file_path, 'r') as file:
-                        tags = file.read().split(',')
-                        all_tags.update(tags)
+                    try:
+                        # 最初にUTF-8で試す
+                        with open(file_path, 'r', encoding='utf-8') as file:
+                            tags = file.read().split(',')
+
+                    except UnicodeDecodeError:
+                        # UTF-8で失敗した場合はCP932で試す
+                        with open(file_path, 'r', encoding='cp932') as file:
+                            tags = file.read().split(',')
+
+
+                    all_tags.update(tags)
 
         update_tag_list(list(all_tags))
         log_text.insert(tk.END, "Tags loaded successfully.\n")
 
     except Exception as e:
         log_text.insert(tk.END, f"Error loading tags: {e}\n")
-    entry_search.delete(0, tk.END)  # タグ検索フィールドをクリア
 
 # タグをリストからテキストフィールドに設定する関数
 def set_tags_from_listbox(event):
