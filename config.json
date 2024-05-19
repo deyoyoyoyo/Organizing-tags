@@ -1,0 +1,20 @@
+{
+    "folder_path": "./caption",
+    "extensions": [
+        ".txt",
+        ".caption"
+    ],
+    "first_tags": [
+        "1girl",
+        "1boy"
+    ],
+    "last_tags": [
+        "normal quality"
+    ],
+    "add_tags": [
+        "normal quality"
+    ],
+    "remove_tags": [
+        "black hair"
+    ]
+}
