@@ -9,6 +9,8 @@ Organizing Tags GUIは、キャプションファイルのタグを整理する�
 ターミナルを開き任意のフォルダで下記コマンドを実行してください。
 ```
 git pull https://github.com/deyoyoyoyo/Organizing-tags.git
+python -m venv venv  
+.\venv\Scripts\activate  
 pip install Pillow
 pip install tkinterdnd2
 ```
